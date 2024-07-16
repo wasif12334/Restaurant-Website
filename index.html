@@ -12,8 +12,10 @@
         <nav>
             <div class="logo">
                 <img src="logo.png" alt=""> </div>
-            <div class="nav-links">
+            <div id="nav-links" class="nav-links">
+                <i id="nav-icons" class="fa fa-times" onclick="hidemenu()"></i>
                 <ul>
+                    
                     <li><a href="" class="nav-home"> HOME</a></li>
                     <li><a href="" class="nav-menu">MENU</a></li>
                     <li><a href=""class="nav-services">SERVICES</a></li>
@@ -23,8 +25,52 @@
             <div class="nav-btn">
                 <button>ORDER NOW</button>
             </div>
-            <i class="nav-icons" class="fa-solid fa-bars"></i>
+            <i id="nav-icons" class="fa fa-bars" onclick="showmenu()"></i>
         </nav>
+        <!--Hero Section-->
+        <section class="hero">
+           
+            <div class="col">
+                <div id="slider-img1"></div>
+                <div id="slider-img2"></div>
+                <div id="slider-img3"></div>
+                <div id="slider-img4"></div>
+            </div>
+            <div class="hero-btn">
+      <a href="#slider-img1"></a>
+      <a href="#slider-img2"></a>
+      <a href="#slider-img3"></a>
+      <a href="#slider-img4"></a>
+            </div>
+        </section>
     </header>
+    <!--Menu section--->
+    <section class="menu">
+        
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--JAVA-->
+           <script>
+            var navlinks=document.getElementById("nav-links");
+            function showmenu(){
+               navlinks.style.right="0";
+            }
+            function hidemenu(){
+               navlinks.style.right="-200px";
+            }
+               </script>
 </body>
 </html>

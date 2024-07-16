@@ -13,6 +13,11 @@ body{
 /* ---------Header-------------*/
 /* ---------NAv-------------*/
                         /* ---------LOGO-------------*/
+header{
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+}
 nav{
     display: flex;
     justify-content: space-around;
@@ -33,26 +38,27 @@ nav{
 
 }
                         /* ---------Nav Menu-------------*/
-.nav-links{
+#nav-links{
     flex-basis: 35%;
 }
-.nav-links ul{
+
+#nav-links ul{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.nav-links ul li{
+#nav-links ul li{
     list-style: none;
     padding: 0px 10px;
 }
-.nav-links ul li a{
+#nav-links ul li a{
 text-decoration: none;
 color: black;
 font-style: 10rem;
 font-weight: 500;
 text-shadow: 1px 1px rgba(0,0,0,0.3 );
 }
-.nav-links ul li::after{
+#nav-links ul li::after{
     content: '';
     width: 0%;
     height: 2px;
@@ -62,7 +68,7 @@ text-shadow: 1px 1px rgba(0,0,0,0.3 );
     transition: 0.75s ;
 }
 
-.nav-links ul li:hover::after{
+#nav-links ul li:hover::after{
     width: 100%;
     }
 
@@ -84,8 +90,123 @@ font-weight: 600;
 font-size: 15px;
 border-radius: 30px;
 }
-.nav-icons{
+#nav-icons  {
  
 display: none;
 }
 /*------------Hero-Section----------------*/
+.hero{
+    width: 100%;
+    height: 80vh;
+}
+/*---------Carousol-------------------*/
+
+.col{
+    display: grid;
+    grid-template-columns: repeat(4,100%);
+    width: 100%;
+    height: 100%;
+animation: slider 17s ease-in-out infinite alternate-reverse ;
+
+}
+.col #slider-img1{
+    background-image: url(bugerimg.avif);
+    background-position: center;
+}
+.col #slider-img2{
+    background-image: url(resturant.webp);
+    background-position: center;
+    background-size: cover;
+}
+.col #slider-img3{
+    background-image: url(pizza.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.col #slider-img4{
+    background-image: url( food.avif);
+    background-position: center;
+}
+/*----Hero-btn____________*/
+.hero-btn{
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+}
+.hero-btn a{
+    background: rgb(245, 243, 243);
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 0.3rem;
+}
+/*-------Menu Section--------*/
+.menu{
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+
+
+
+
+
+
+
+                 /*--------------------Responsive NESS---------------------*/
+ /*--------------------HEader ---------------------*/
+@media (max-width:700px){
+     /*--------------------Nav BAr ---------------------*/
+ .nav-btn button{
+display: none;
+}
+#nav-links {
+    position: absolute;
+    background: #998d8c;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    color: #000;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 0.61s;;
+}
+#nav-links ul{
+    display: inline-block;
+    margin: 19px auto;
+   
+}
+#nav-links ul li {
+    border-left:7px solid rgb(58, 116, 4) ;
+
+}
+
+#nav-icons {
+    display: block;
+    color:#141313;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 22px;
+}
+}
+                 /*--------------------Animation---------------------*/
+
+ /*--------------------Hero-content---------------------*/
+                @keyframes slider{
+ 0%{transform: translateX(0%);  }
+ 10%{transform: translateX(-100%);  }
+ 20%{transform: translateX(-100%);  }
+ 30%{transform: translateX(-200%);  }
+ 40%{transform: translateX(-200%);  }
+ 50%{transform: translateX(-200%);  }
+ 60%{transform: translateX(-300%);  }
+ 70%{transform: translateX(-300%);  }
+ 80%{transform: translateX(-300%);  }
+ 90%{transform: translateX(0%);  }
+ 100%{transform: translateX(0%);  }
+ 
+}

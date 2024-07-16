@@ -18,16 +18,17 @@ nav{
     justify-content: space-around;
     align-items: center;
     height: 100px;
-    border: 2px solid ;
+     border-bottom: 1px solid black;
 }
 .logo{
     flex-basis: 20%;
     
-    border: 1px solid green;
+    
     height: 150px;
+    
 }
 .logo img{
-    width: 150px;
+    width: 250px;
     height: 150px;
 
 }
@@ -42,6 +43,7 @@ nav{
 }
 .nav-links ul li{
     list-style: none;
+    padding: 0px 10px;
 }
 .nav-links ul li a{
 text-decoration: none;
@@ -50,26 +52,20 @@ font-style: 10rem;
 font-weight: 500;
 text-shadow: 1px 1px rgba(0,0,0,0.3 );
 }
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: 4px auto;
+    transition: 0.75s ;
+}
 
-.layer{
-    position: absolute;
+.nav-links ul li:hover::after{
     width: 100%;
-    height: 100%;
-    background: #a11414;
-    border-radius: 12px;
-    opacity: 0.5;
-    left: 0;
-    top: 0;
-}
-.nav-menu , .nav-service , .nav-about , .nav-home{
-    padding: 10px 20px;
- 
-    border-radius: 12px;
-    position: relative;
-}
-.nav-menu a:hover .layer{
-    transform: translateX(10px);
-}     
+    }
+
 /* ---------Nav-btn-------------*/
 .nav-btn{
 flex-basis: 10%;
@@ -79,5 +75,17 @@ flex-basis: 10%;
     background: lightblue;
     border-radius: 20px;
     border: 2px  solid lightblue ;
-    box-shadow: 2px 2px 2px  black;
+    box-shadow: 1px 1px 1px  black;
 }
+.nav-btn  :hover{
+box-shadow: 1.5px 1.5px 1.5px 1.5px black;
+transition: 0.5s;
+font-weight: 600;
+font-size: 15px;
+border-radius: 30px;
+}
+.nav-icons{
+ 
+display: none;
+}
+/*------------Hero-Section----------------*/
